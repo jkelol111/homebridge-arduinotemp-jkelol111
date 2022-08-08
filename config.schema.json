@@ -1,15 +1,21 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
+  "pluginAlias": "ArduinoTemperature",
+  "pluginType": "accessory",
   "singular": true,
   "schema": {
     "type": "object",
     "properties": {
       "name": {
-        "title": "Name",
+        "title": "Device name",
+        "type": "string",
+        "required": false,
+        "default": "Arduino Temperature Sensor"
+      },
+      "serialPath": {
+        "title": "Serial port path",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "/dev/ttyUSB0"
       }
     }
   }
